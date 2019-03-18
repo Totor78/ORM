@@ -2,14 +2,16 @@ package fr.epsi.model;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.criteria.CriteriaBuilder;
+import java.util.Date;
 
 public class Grade {
 
     @Id
     @GeneratedValue
     private long id;
-    private String firstname;
-    private String lastname;
+    private Integer value;
+    private Date date;
 
     public long getId() {
         return id;
@@ -19,19 +21,19 @@ public class Grade {
         this.id = id;
     }
 
-    public String getFirstname() {
-        return firstname;
+    public Integer getValue() {
+        return value;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setValue(Integer value) {
+        this.value = value;
     }
 
-    public String getLastname() {
-        return lastname;
+    public Date getDate() {
+        return date;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void setDate(Date lastname) {
+        this.date = date;
     }
 }

@@ -8,8 +8,7 @@ public class Student {
     @Id
     @GeneratedValue
     private long id;
-    private String firstname;
-    private String lastname;
+    private String classroom;
 
     public long getId() {
         return id;
@@ -19,20 +18,14 @@ public class Student {
         this.id = id;
     }
 
-    public String getFirstname() {
-        return firstname;
+    public String getClassroom() {
+        return classroom;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setClassroom(String classroom) {
+        this.classroom = classroom;
     }
 
-    public String getLastname() {
-        return lastname;
-    }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
 
 }
