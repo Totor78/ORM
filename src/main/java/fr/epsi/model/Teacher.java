@@ -2,6 +2,8 @@ package fr.epsi.model;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 public class Teacher {
 
@@ -10,7 +12,8 @@ public class Teacher {
     private long id;
     private String firstname;
     private String lastname;
-
+    @OneToMany
+    private int Subject_Id;
     public long getId() {
         return id;
     }
@@ -34,5 +37,6 @@ public class Teacher {
     public void setLastname(String lastname) {
         this.lastname = lastname;
     }
+
 
 }

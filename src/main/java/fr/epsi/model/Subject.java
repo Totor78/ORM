@@ -2,6 +2,7 @@ package fr.epsi.model;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 public class Subject {
 
@@ -25,6 +26,7 @@ public class Subject {
     public void setLieblle(String firstname) {
         this.libelle = firstname;
     }
+
 
 
 }
