@@ -1,5 +1,4 @@
 package fr.epsi.dao;
-
 import fr.epsi.model.User;
 import org.junit.Test;
 

@@ -1,10 +1,11 @@
 package fr.epsi.model;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
+import java.io.Serializable;
 
-public class Subject {
+@Entity
+@Table(name = "Subject")
+public class Subject implements Serializable {
 
     @Id
     @GeneratedValue
