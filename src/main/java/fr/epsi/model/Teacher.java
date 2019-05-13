@@ -1,19 +1,25 @@
 package fr.epsi.model;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
-public class Teacher {
+import javax.persistence.*;
 
+import java.io.Serializable;
+import java.util.Set;
+
+@Entity
+@Table(name="teacher")
+public class Teacher implements Serializable {
     @Id
     @GeneratedValue
     private long id;
     private String firstname;
     private String lastname;
-    @OneToMany
-    private int Subject_Id;
+    @OneToMany(mappedBy = "teacher",cascade = CascadeType.ALL)
+    private Set<Subject> subjects;
+
+    public Teacher() {
+    }
+
     public long getId() {
         return id;
     }
@@ -38,5 +44,11 @@ public class Teacher {
         this.lastname = lastname;
     }
 
+    public Set<Subject> getSubjects() {
+        return subjects;
+    }
 
+    public void setSubjects(Set<Subject> subjects) {
+        this.subjects = subjects;
+    }
 }

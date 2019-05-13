@@ -4,13 +4,16 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "Subject")
+@Table(name = "subject")
 public class Subject implements Serializable {
+
 
     @Id
     @GeneratedValue
     private long id;
     private String libelle;
+    @ManyToOne
+    private Teacher teacher;
 
     public long getId() {
         return id;
@@ -24,10 +27,15 @@ public class Subject implements Serializable {
         return libelle;
     }
 
-    public void setLieblle(String firstname) {
+    public void setLibelle(String firstname) {
         this.libelle = firstname;
     }
 
+    public Teacher getTeacher() {
+        return teacher;
+    }
 
-
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
+    }
 }

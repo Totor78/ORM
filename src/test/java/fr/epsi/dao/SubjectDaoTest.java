@@ -8,14 +8,14 @@ public class SubjectDaoTest {
     @Test
     public void insertSubject() {
         Subject subject = new Subject();
-        subject.setLieblle("Anglais");
+        subject.setLibelle("Anglais");
         System.out.println(new SubjectDao().save(subject));
 
     }
 
     @Test
     public void getSubject() {
-        Subject subject = new SubjectDao().get(11);
+        Subject subject = new SubjectDao().get(5);
         System.out.println(subject.getLibelle());
     }
 }
