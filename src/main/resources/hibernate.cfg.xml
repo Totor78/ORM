@@ -15,8 +15,11 @@
         <property name="current_session_context_class">thread</property>
 
         <mapping class="fr.epsi.model.User"/>
-        <mapping class="fr.epsi.model.Subject"/>
-        <mapping class="fr.epsi.model.Teacher"/>
-        <mapping class="fr.epsi.model.Grade"/>
+        <mapping class="fr.epsi.model.Admin"/>
+        <mapping class="fr.epsi.model.CarteBleue"/>
+        <mapping class="fr.epsi.model.Channel"/>
+        <mapping class="fr.epsi.model.Message"/>
+        <mapping class="fr.epsi.model.Note"/>
+
     </session-factory>
 </hibernate-configuration>
